@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Ugh, The Mind</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=1">
+		<script src="/socket.io/socket.io.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+		<script src="themind.js" defer></script>
+		<link rel="stylesheet" type="text/css" href="style.css">
+	</head>
+	<body>
+		<div id="app">
+			<div id="topstuff">
+				<h1>The Mind, Ugh</h1>
+				<p id="topcard" class="card" v-on:click="playSound()">{{ topCard }}</p>
+			</div>
+		
+			<div id="stats-controls">
+				<p v-if="numPlayers == 1">{{ numPlayers }} <span class="stat-text">player</span></p>
+				<p v-else>{{ numPlayers }} <span class="stat-text">players</span></p>
+				
+				<p v-if="cardsInPlay == 1">{{ cardsInPlay }} <span class="stat-text">card in play</span></p>
+				<p v-else>{{ cardsInPlay }} <span class="stat-text">cards in play</span></p>
+				
+				<p v-if="oopses == 1">{{ oopses }} <span class="stat-text">oops</span></p>
+				<p v-else>{{ oopses }} <span class="stat-text">oopses</span></p>
+				
+				<p><button v-on:click="resetGame()">Reset</button></p>
+				<p>Difficulty: <button class="sign-button" v-on:click="addDifficulty()">+</button> <button class="sign-button" v-on:click="subtractDifficulty()">-</button></p>
+			</div>
+			
+			<div id="hand">
+				<p class="card" v-for="card in cards" v-on:click="playCard(card);">{{ card }}</p>
+			</div>
+			
+			<div id="messages">
+				<p v-for="message in messages">{{ message }}</p>
+			</div>
+		</div>
+	</body>
+</html>

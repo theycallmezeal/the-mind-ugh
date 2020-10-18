@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css?family=Questrial&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Akronim&display=swap');
+
+body {
+	background-image: url("wood.jpg");
+	background-size: cover;
+	font-size: 30px;
+	color: #f7e3d2;
+	text-shadow: 2px 2px 3px black;
+	font-family: Questrial;
+}
+
+#topstuff {
+	position: fixed;
+	top: 0px;
+	left: 50%;
+	width: 500px;
+	margin-left: -250px;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+h1 {
+	margin-top: 20px;
+}
+
+button {
+	font-family: inherit;
+	font-size: 60%;
+	padding: 10px;
+	border: solid 1px #5d4634;
+	background: linear-gradient(180deg, rgba(156,121,93,1) 0%, rgba(93,70,52,1) 100%);
+	color: white;
+	font-weight: bold;
+	text-shadow: 0px 0px 3px black;
+	border-radius: 5px;
+}
+
+.sign-button {
+	width: 35px;
+}
+
+.card {
+	border: none;
+	background: radial-gradient(circle, rgba(220,226,255,1) 20%, rgba(89,84,189,1) 54%, rgba(47,10,17,1) 82%, rgba(0,0,0,1) 100%);
+	width: 150px;
+	padding-top: 50px;
+	padding-bottom: 50px;
+	color: black;
+	font-weight: bold;
+	font-family: Akronim;
+	border-radius: 10px;
+	font-size: 200%;
+	text-align: center;
+	margin: 10px;
+	box-shadow: 5px 5px 5px black;
+	transition: transform 0.25s;
+}
+
+.card:hover {
+	transform: scale(1.01);
+	cursor: pointer;
+}
+
+#hand {
+	display: flex;
+	width: 100%;
+	justify-content: center;
+	
+	position: fixed;
+	bottom: 0px;
+}
+
+#stats-controls {
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	padding-left: 20px;
+}
+
+#messages {
+	position: fixed;
+	right: 0px;
+	top: 0px;
+	text-align: right;
+	font-size: 50%;
+	padding-right: 20px;
+}
+
+.stat-text {
+	font-size: 80%;
+}
